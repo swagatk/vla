@@ -85,9 +85,14 @@ source openvla_env/bin/activate
 # Install requests and OpenCV
 pip install requests opencv-python
 
+
+
 # CRITICAL: Downgrade NumPy to 1.x to maintain compatibility with picamera2
 pip uninstall numpy -y
 pip install "numpy<2.0"
+
+# you might need to downgrade opencv to work with numpy 1.x
+pip install "opencv-python<4.10"
 ```
 
 ### 2. The Client Script (pi_robot.py)

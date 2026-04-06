@@ -5,7 +5,7 @@ import numpy as np
 from picamera2 import Picamera2
 
 # --- CONFIGURATION ---
-SERVER_URL = "[http://192.168.1.](http://192.168.1.)XX:8000/control"  # <--- REPLACE WITH LAPTOP IP
+SERVER_URL = "http://192.168.0.204:8000/control"  # <--- REPLACE WITH LAPTOP IP
 INSTRUCTION = "reach forward"
 SENSITIVITY = 100.0   
 
