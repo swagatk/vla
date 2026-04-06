@@ -79,13 +79,11 @@ A video window will open showing your webcam feed. Wave your hand in front of th
 Raspberry Pi OS Bookworm natively supports picamera2. However, modern virtual environments often pull numpy 2.x, which breaks picamera2 binaries.On your Raspberry Pi:
 ```
 # Create and activate a virtual environment (if you use one)
-python -m venv openvla_env
+python -m venv openvla_env --system-site-packages
 source openvla_env/bin/activate
 
 # Install requests and OpenCV
 pip install requests opencv-python
-
-
 
 # CRITICAL: Downgrade NumPy to 1.x to maintain compatibility with picamera2
 pip uninstall numpy -y
@@ -93,6 +91,9 @@ pip install "numpy<2.0"
 
 # you might need to downgrade opencv to work with numpy 1.x
 pip install "opencv-python<4.10"
+
+# Make sure the picamera is already installed
+sudo apt install python3-picamera2
 ```
 
 ### 2. The Client Script (pi_robot.py)
