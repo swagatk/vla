@@ -53,7 +53,8 @@ def main():
     print("Initializing Picamera2...")
     picam2 = Picamera2()
     # BGR888 is required for OpenCV compatibility
-    config = picam2.create_configuration(main={"size": (320, 240), "format": "BGR888"})
+    # Change this line:
+    config = picam2.create_video_configuration(main={"size": (320, 240), "format": "BGR888"})
     picam2.configure(config)
     picam2.start()
     
