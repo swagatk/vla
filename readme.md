@@ -118,3 +118,11 @@ python pi_robot.py
 1. **Robot turns the wrong way:** Swap the `turn_right()` and `turn_left()` function calls inside the `execute_command()` `if/elif` block.
 2. **Robot stops too much:** Lower the `MOVE_THRESHOLD` from `0.15` to `0.10`.
 3. **Robot jitters left/right:** Increase the `TURN_THRESHOLD` from `0.20` to `0.25`.
+
+
+### Images
+
+| Server side log | Client side log|
+|--------------- | -------------|
+|![server](./images/server_log.png)|![client](./images/client_log.png) |
+
